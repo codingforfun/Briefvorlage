@@ -1,0 +1,64 @@
+\ProvidesFile{DIN676B.lco}[2004/09/16 v2.9t LaTeX2e KOMA letter-class-option]
+
+\@ifundefined{scr@fromname@var}{%
+  \GenericWarning{(%
+  DIN676B%
+  .lco)\@spaces\@spaces\@spaces\@spaces\@spaces\@spaces}{%
+  Letter-class-option
+  DIN676B
+  Warning:\space
+  This letter class option file was made only\MessageBreak
+  to be used with KOMA-Script letter class\MessageBreak
+  `scrlttr2'. Use with other classes may result\MessageBreak
+  in a lot of errors\@gobble
+  }
+}{}
+
+\LetterOptionNeedsPapersize{DIN676B}{a4}
+
+% Falzmarken
+\@setplength{foldmarkhpos}{4.5mm}
+\@setplength{tfoldmarkvpos}{105mm}
+\@setplength{bfoldmarkvpos}{210mm}
+
+% Anschrift
+\@setplength{toaddrvpos}{45mm}
+\@setplength{toaddrhpos}{20mm}
+\@setplength{toaddrwidth}{85mm}
+\@setplength{toaddrheight}{40mm}
+\@setplength{toaddrindent}{\z@}
+
+\@setplength{refvpos}{98.5mm}
+\@setplength{refaftervskip}{\baselineskip}
+
+\@setplength{specialmailindent}{\fill}
+\@setplength{specialmailrightindent}{1em}
+
+\@setplength{locwidth}{\z@}
+
+\@setplength{backaddrheight}{5mm}
+
+\@setplength{firstheadvpos}{8mm}
+\@setplength{firstheadwidth}{\paperwidth}
+
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+
+\@setplength{firstfootwidth}{\useplength{firstheadwidth}}
+\@setplength{firstfootvpos}{1in}
+\@addtoplength{firstfootvpos}{\topmargin}
+\@addtoplength{firstfootvpos}{\headheight}
+\@addtoplength{firstfootvpos}{\headsep}
+\@addtoplength{firstfootvpos}{\textheight}
+\@addtoplength{firstfootvpos}{\footskip}
+\@setplength{refwidth}{0pt}
+
+\@setplength{sigindent}{0mm}
+\@setplength{sigbeforevskip}{2\baselineskip}
+\let\raggedsignature=\centering
+\endinput
+%%
+%% End of file `DIN.lco'.

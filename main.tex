@@ -1,0 +1,64 @@
+\documentclass[
+%    fontsize=10pt,
+    BriefVorlage, %% Lädt Einstellungen, Absenderadresse und Basispakete
+]{scrlttr2}
+
+%% Seitenumbruch auf Seite 1 hinauszögern
+%\KOMAoptions{enlargefirstpage=true}
+
+%% Titel des Briefes – wird noch über dem Betreff zentriert in großem Font angezeigt
+%\setkomavar{title}{Wiederspruch}
+
+%\KOMAoptions{fromphone=true}
+%\KOMAoptions{fromemail=true}
+
+%% Geschäftszeile
+%\setkomavar{yourref}{1234567}  %% Ihr Zeichen:
+%\setkomavar{yourmail}{11.\,11.\,2011}  %% Ihr Schreiben vom:
+%\setkomavar{myref}{ABC1234}  %% Mein Zeichen:
+%\setkomavar{invoice}{R123456} %% Rechnungsnummer
+
+%% Feldbezeichnung ändern
+%\renewcaptionname{ngerman}{\customername}{Matrikelnr.}
+
+%% Eigene Felddefinition in der Geschäftszeile
+%\newkomavar*[Kundennummer]{cfield1}
+%\setkomavar{cfield1}{K1234567} 
+
+
+%% Ort – vor Datumsangabe in Geschäftszeile
+\setkomavar{place}{Magdeburg}
+
+%% Datum: wenn auskommentiert dann \today
+%\setkomavar{date}{11.\,11.\,2011}
+
+% Alternative Absenderadresse
+%\setkomavar{fromname}{Max Musterman/Marie Musterfrau}
+%\setkomavar{fromaddress}{Musterstraße~5\\12345~Musterstadt} 
+
+%% Betreff
+\setkomavar{subject}{Weltfrieden}
+
+\begin{document}
+\begin{letter}{%
+Max Mustermann\\
+Musterstraße 5\\
+12345 Musterstadt
+}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+hiermit beantrage ich den Weltfrieden für alle Völker der Erde. 
+
+\closing{Mit freundlichen Grüßen,}
+
+
+\renewcaptionname{ngerman}{\enclname}{Anlage}
+
+\encl{%
+\begin{itemize}
+    \item[–] Gutachten zur dringenden Notwendigkeit von Weltfrieden
+\end{itemize}}
+
+\end{letter}
+\end{document}

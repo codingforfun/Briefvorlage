@@ -1,0 +1,78 @@
+\ProvidesFile{BriefVorlage.lco}[2004/09/16 v2.9t LaTeX2e KOMA letter-class-option]
+\LoadLetterOption{DIN676B}
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[ngerman]{babel}
+
+%% Eurosymbol \EUR{10} oder 10 \euro
+\usepackage[official,right]{eurosym} 
+
+%% serifenlose Schrift
+\usepackage{cmbright}
+\usepackage{microtype}
+
+%% Papierformat
+\KOMAoptions{paper=a4}
+
+%% Wo soll die Absenderadresse stehen?
+%% Opt.: left; right; center; off;
+%\KOMAoptions{fromalign=right}
+
+%% Linie unter Absenderadresse?
+%% Opt.: afteraddress; aftername; off
+%\KOMAoptions{fromrule=afteraddress}
+%\KOMAoptions{headsepline=on}
+
+%% Wo sollen Seitenzahlen stehen? (werden nur angezeigt, wenn mehr als 1 Seite)
+%% Opt.: 	off; head; foot; center; right; left;
+%% 			footleft; footright; footcenter;
+%% 			headleft; headright; headcenter;
+\KOMAoptions{pagenumber=footcenter}
+
+%% Briefkopferweiterungen anzeigen?
+%% Opt.: true; false;
+%\KOMAoptions{foldmarks=false}
+%\KOMAoptions{fromphone=true}
+%\KOMAoptions{fromfax=true}
+%\KOMAoptions{fromemail=true}
+%\KOMAoptions{fromurl=true}
+%\KOMAoptions{fromlogo=true}
+%\KOMAoptions{addrfield=false}
+%\KOMAoptions{backaddress=false}
+
+%% Betreff
+%% Opt.: beforopening; afteropening; titled; untitled;
+%\KOMAoptions{subject=titled}
+
+%% Absatzeinstellung
+%%  off: normale Absätze on: Leerzeile, kein Einzug
+\KOMAoptions{parskip=on}
+
+%% Absender
+\setkomavar{fromname}{Max Mustermann}
+\setkomavar{fromaddress}{Musterstraße~5\\12345~Musterstadt} 
+
+%% erweiterte Absendeangaben
+%\setkomavar{fromphone}{(030)~1\,23\,45\,67}
+%\setkomavar{fromfax}{(030)~1\,23\,45\,67}
+\setkomavar{fromemail}{max.mustermann@example.com}
+%\setkomavar{fromurl}{www.example.com}
+%\setkomavar{frombank}{12345\\6789}
+
+%% Hier hab ich das zusammengefasst und den Namen auskommentiert, damit der ganze Absender in einer Zeile steht durch Punkte voneinander getrennt anstatt als umgebrochener Adressblock
+%\setkomavar{fromaddress}{Max~Mustermann~$\bullet$~Musterstraße~5~$\bullet$~12345~Musterstadt}
+
+%% Rücksenderaddresse im Fenster; wird von selbst aus der Absenderadresse erstellt wenn nicht vorhanden
+%\setkomavar{backaddress}{Max~Mustermann\\Musterstraße~5\\12345~Musterstadt}
+
+%% Seperator der Rückadresse im Fenster
+%\setkomavar{backaddressseparator}{~$\bullet$~}
+
+%% Signatur
+\setkomavar{signature}{\rule{3cm}{.5pt}\\\footnotesize \usekomavar{fromname}}
+
+
+
+
+
